@@ -92,11 +92,17 @@ class Animal {
 }
 
 class Dog extends Animal {
-  // Não tem nada aqui.
+  //Sobrescrevendo métodos
+  makeNoise() {
+    console.log("Au au!");
+  }
 }
 
 class Cat extends Animal {
-  // Não tem nada aqui.
+  //Sobrescrevendo métodos
+  makeNoise() {
+    console.log("miau... miau...");
+  }
 }
 
 const cat = new Cat("Link");
