@@ -26,3 +26,17 @@ class Person {
 }
 
 const person = new Person("Jonas");
+
+//Nesta aula, vamos aprender um pouco mais sobre o uso do this em classes em JavaScript, mostrando como criar propriedades e acessá-las.
+
+class Product {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const product1 = new Product("Teclado");
+console.log(product1);
+
+const product2 = new Product("Mouse");
+console.log(product2);
