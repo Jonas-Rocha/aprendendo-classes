@@ -57,3 +57,20 @@ class User {
 
 const user = new User("Jonas", "jonasrpnstudy@gmail.com");
 user.sendEmail();
+
+/*
+Nesta aula, vamos aprender o conceito de método estático em programação. Vamos ver como criar e utilizar um método estático em uma classe, destacando a diferença de acesso entre métodos estáticos e não estáticos. Demonstraremos que métodos estáticos podem ser acessados sem a necessidade de instanciar a classe, enquanto métodos não estáticos requerem a instanciação da classe.
+*/
+
+class Usuario {
+  // O "static" serve para acessarmos a classe diretamente pelo "Usuario", sem precisar instanciar numa nova const.
+  static showMessage() {
+    console.log("Essa é uma mensagem");
+  }
+}
+
+//const usuario = new Usuario();
+//usuario.showMessage();
+
+// Tentando acessar o metodo "showMessage" direto, sem precisar instanciar uma classe com o "new"
+Usuario.showMessage(); // Assim da erro e não funciona, pois a classe nem foi instanciada. porém se a classe tiver um metodo "static" funciona.
