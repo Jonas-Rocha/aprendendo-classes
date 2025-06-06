@@ -74,3 +74,34 @@ class Usuario {
 
 // Tentando acessar o metodo "showMessage" direto, sem precisar instanciar uma classe com o "new"
 Usuario.showMessage(); // Assim da erro e não funciona, pois a classe nem foi instanciada. porém se a classe tiver um metodo "static" funciona.
+
+/*
+Nesta aula, vamos aprender como aplicar herança com classes em programação. A herança permite reutilizar propriedades e métodos de classes superiores.
+*/
+
+// Como aplicar herança com classes?
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  makeNoise() {
+    console.log("Algum som genérico do animal");
+  }
+}
+
+class Dog extends Animal {
+  // Não tem nada aqui.
+}
+
+class Cat extends Animal {
+  // Não tem nada aqui.
+}
+
+const cat = new Cat("Link");
+console.log(cat.name);
+cat.makeNoise();
+const dog = new Dog("Yugi");
+console.log(dog.name);
+dog.makeNoise();
