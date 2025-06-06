@@ -40,3 +40,20 @@ console.log(product1);
 
 const product2 = new Product("Mouse");
 console.log(product2);
+
+// Nesta aula, vamos aprender como adicionar métodos em classes em JavaScript. Veremos que não é necessário usar a palavra-chave function ao definir um método dentro de uma classe.
+
+class User {
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
+  sendEmail() {
+    console.log(
+      `Email enviado para ${this.name} no endereço eletrônico, ${this.email}`
+    );
+  }
+}
+
+const user = new User("Jonas", "jonasrpnstudy@gmail.com");
+user.sendEmail();
