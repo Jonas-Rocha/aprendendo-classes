@@ -230,3 +230,5 @@ try {
     console.log("Não foi possivel executar");
   }
 }
+
+// Encerrando módulo de Javascript intermediário.
