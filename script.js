@@ -153,6 +153,11 @@ Nesta aula, vamos aprender o conceito de prototype chain no JavaScript, que se b
 
 // Aprendendo sobre herança e cadeia de protótipos.
 
+/*
+Nesta aula, exploraremos a herança de objetos em JavaScript, demonstrando na prática o uso do prototype. Vamos aprender como objetos como endereço e arrays possuem protótipos que podem ser explorados para entender a cadeia de herança. Compreender essa estrutura de herança em
+
+*/
+
 const address = {
   city: "São Paulo",
   country: "Brazil",
