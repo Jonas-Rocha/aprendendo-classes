@@ -152,3 +152,16 @@ Nesta aula, vamos aprender o conceito de prototype chain no JavaScript, que se b
 */
 
 // Aprendendo sobre herança e cadeia de protótipos.
+
+const address = {
+  city: "São Paulo",
+  country: "Brazil",
+};
+
+console.log(address);
+
+const users = ["Jonas", "Andressa", "Ana"];
+console.log(users);
+
+const userName = "Jonas Rocha";
+console.log(userName.__proto__);
