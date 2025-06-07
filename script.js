@@ -170,3 +170,39 @@ console.log(users);
 
 const userName = "Jonas Rocha";
 console.log(userName.__proto__);
+
+//Como utilizar classes pra lidar com exceções.
+
+/*
+Nesta aula, aprenderemos a utilizar classes para lidar com exceções específicas em JavaScript. Vamos ver como identificar e tratar diferentes tipos de erros, como TypeError e RangeError. Também foi abordado o uso do método throwNew para gerar exceções personalizadas. Vamos mostrar a importância de tratar exceções de forma específica e amigável para o usuário, assim como a possibilidade de encadear diferentes tipos de exceções.
+*/
+
+let obj = [];
+let index = 300;
+
+try {
+  //obj.execute();
+  if (!obj.includes(17)) {
+    throw new Error("O número 17 não está disponível.");
+    // Estamos passando para o CONSTRUTOR da CLASSE "Error" a mensagem a ser passada.
+    /* Por isso é bom aprender a usar o método construtor e a criar classes para entender como usar neste exemplo de tratamento de erros.*/
+  }
+  if (index > 99) {
+    // o "throw" tem um comportamento muito parecido com o "return", assim que ele é validado ele para a execução e pula direto para o bloco de "catch" para lidar com a excessão, por isso não mostrou o outro
+    throw new RangeError(
+      "Número está fora do intervalo. escolha um número de 0 a 99"
+    );
+  }
+} catch (error) {
+  if (error instanceof TypeError) {
+    console.log("Método insdisponível.");
+  } else if (error instanceof RangeError) {
+    //neste if eu estou verificando se o meu "error" é uma instancia do tipo "RangeError".
+    console.log(error.message);
+    //aqui eu estou pegando o bloco de erro retornado e pedindo para mostrar apenas a mensagem(ou string).
+  } else {
+    console.log("Não foi possivel realizar a ação.");
+  }
+
+  console.log(error);
+}
